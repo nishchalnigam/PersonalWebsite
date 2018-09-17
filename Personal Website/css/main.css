@@ -1,0 +1,133 @@
+<style type="text/css" media="screen, projection">
+/*************************************************************************
+Overall Global Style
+*************************************************************************/
+/* font size specified in ems to facilitate resizing an em ~16 pixels normally */
+body {	font: 1.2em Palantino, Times, serif;
+}
+
+/*************************************************************************
+Basic Beginning Structure -- GRID -- for normal screens
+**************************************************************************/
+/* larger single elements specified by id */
+#page {
+	padding: 5px;
+	width: 1024px;
+	margin: 5px auto;
+}
+#header {
+	height: 81px;
+}
+#content {
+	width: 700px;
+	height:500px;
+	float: left;
+}
+
+
+#snav {
+	width: 300px;
+	float: left;
+
+	
+}
+
+#logo {display:block;
+        margin-left: auto;
+        margin-right: auto;
+		width:425px;height:81px;
+}
+
+#tourism {display:block;
+        margin-left: auto;
+        margin-right: auto;
+		width:425px;height:81px;
+}
+/* initial placement of repeating elements identified by class */
+
+.icon {	float: left;	font-size: 1em;
+	line-height: 1.1; text-align: center;
+	margin: .5em 0em .5em 1em;			
+	width: 40%;				
+	text-transform: capitalize;
+	letter-spacing: 0.05em;
+}
+
+.caption{font-size: .9em;
+	}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+/*****************************************************************************
+Media Query Adjustments Based on screen size
+******************************************************************************/
+/* for 1024px or less */
+@media screen and (max-width: 1024px) {
+	
+	#page {		width: 95%; 	 
+	}
+	#content {		width: 66%; 	
+	}
+	#snav   {		width: 32%;  	
+	}
+	.caption{font-size: .8em;
+	}
+}
+
+/* for 700px or less */
+@media screen and (max-width: 700px) {
+	#content {		width: 98%; float: left;
+	}
+	#snav {		width: auto; float: right;
+	}
+	.icon {	float: left;
+	margin: .5em 0em .5em 1em;			
+	max-width: 12%;	
+	}
+	.caption{font-size: .7em;
+	}
+}
+
+/* for 480px or less */
+@media screen and (max-width: 480px) {
+	h1 {	font-size: 24px;
+	}
+	.icon {	margin: 0em 0em 0em 0em;			
+	max-width: 12%;
+	text-align: center;	
+	}
+	img.iconimage {	display: block;
+	}
+	.caption{font-size: .6em;
+	}
+}
+
+/* borders and backgrounds to make grid resizing visible */
+#content {	background: #f8f8f8; 
+}
+#snav {	background: #f0efef; 
+}
+#header, #content {	margin-bottom: 5px;
+}
+#page, #header, #content, #snav, #footer {	border: solid 1px #DDDDDD;
+}
+</style>
+
